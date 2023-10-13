@@ -2,7 +2,6 @@ import codecs
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from bs4 import BeautifulSoup
 
-
 # Настройки запуска
 hostName = "localhost"  # Адрес для доступа по сети
 serverPort = 8080  # Порт для доступа по сети
@@ -13,6 +12,7 @@ class MyServer(BaseHTTPRequestHandler):
         Специальный класс, который отвечает за
         обработку входящих запросов от клиентов
     """
+
     @staticmethod
     def __get_html_content():
         with codecs.open("index.html", "r", "UTF-8") as file:
